@@ -77,7 +77,7 @@ public class PomodoroTimer extends JFrame {
                 try {
                     int estimatedPomodoros = Integer
                             .parseInt(JOptionPane.showInputDialog("Enter estimated amount of pomodoros"));
-                    defaultTodoListModel.add(0, new Todo(todoName, estimatedPomodoros));
+                    defaultTodoListModel.addElement(new Todo(todoName, estimatedPomodoros));
                 } catch (NumberFormatException exception) {
                     JOptionPane.showMessageDialog(panelMain, "Invalid number!");
                 }
