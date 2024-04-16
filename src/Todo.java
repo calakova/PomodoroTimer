@@ -5,7 +5,7 @@ public class Todo {
 
     public Todo(String name, int estimatedPomodoros) {
         this.name = name;
-        this.estimatedPomodoros = estimatedPomodoros;
+        this.estimatedPomodoros = Math.max(estimatedPomodoros, 1);
         this.finishedPomodoros = 0;
     }
 
