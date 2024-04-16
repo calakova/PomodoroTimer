@@ -18,6 +18,7 @@ public class PomodoroTimer extends JFrame {
 
     private final Timer timer = new Timer(1000, new TimerListener());
     private int pomodoroCounter = 0;
+    // Initial Pomodoro duration
     private int remainingSeconds = 5;
 
     class TimerListener implements ActionListener {
@@ -42,12 +43,15 @@ public class PomodoroTimer extends JFrame {
                         }
 
                         if (pomodoroCounter % 4 == 0) {
+                            // Long Break duration
                             switchCounter(9, "Long Break");
                         } else {
+                            // Short Break duration
                             switchCounter(3, "Short Break");
                         }
                         break;
                     case "Short Break", "Long Break":
+                        // Pomodoro duration
                         switchCounter(5, "Pomodoro");
                         break;
                 }
